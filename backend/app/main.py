@@ -64,7 +64,7 @@ async def predict(symbol: str,horizon: str = "15m"):
         sym=market.normalize_symbol(symbol)
         interval,h=market.HORIZONS[horizon]
         candles=await cached("candles:"+sym+":"+interval,45,lambda:market.history(app.state.client,sym,interval))
-        database.resolve(sym,candles)
+        database.resolve(sym,candles,market.INTERVAL_MS[interval])
         result=forecast(candles,h)
         if not result:
             return {"symbol":sym,"horizon":horizon,"status":"insufficient_data",
