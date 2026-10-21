@@ -39,3 +39,19 @@ def test_short_horizon_expires_before_global_age_limit(client,monkeypatch):
     store.save_prediction('BTCUSDT',0,'5m',{'signal':'LONG','entry':100,'stop':99,'take_profit':102},1)
     item=client.get('/predictions/BTCUSDT',headers={'Authorization':'Bearer test-only-token'}).json()['items'][0]
     assert item['stale'] and item['signal']=='WAIT'
+
+def test_bitunix_market_is_separate(client,monkeypatch):
+    import asyncio
+    from predice import bitunix
+    async def only_btc(): return [{'symbol':'BTCUSDT','name':'BTC','base':'BTC','source':'Bitunix futures'}]
+    monkeypatch.setattr(bitunix,'assets',only_btc)
+    headers={'Authorization':'Bearer test-only-token'}
+    assert client.put('/watchlist/BTCUSDT?source=bitunix',headers=headers).status_code==200
+    assert client.get('/watchlist?source=bitunix',headers=headers).json()==['BTCUSDT']
+    assert client.get('/watchlist',headers=headers).json().count('BTCUSDT')==1
+    with store.connect() as db:
+        db.execute('INSERT INTO candles VALUES(?,?,?,?)',('BITUNIX:BTCUSDT',300000,101,1))
+        db.execute('INSERT INTO candles VALUES(?,?,?,?)',('BTCUSDT',300000,100,1))
+    assert client.get('/candles/BTCUSDT?source=bitunix',headers=headers).json()[0]['close']==101
+    assert client.get('/candles/BTCUSDT',headers=headers).json()[0]['close']==100
+    assert client.get('/assets?q=https://www.bitunix.com/futures/BTCUSDT&source=bitunix',headers=headers).json()[0]['symbol']=='BTCUSDT'

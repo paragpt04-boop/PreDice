@@ -3,10 +3,10 @@ import argparse
 import asyncio
 import json
 from pathlib import Path
-from . import store, market
+from . import store, market, bitunix
 from .model import forecast, HORIZONS
 
-def walk_forward(rows, window=6000, step=1500):
+def walk_forward(rows, window=6000, step=1500, source='Binance spot'):
     if step < window//4: raise ValueError('Test windows must not overlap')
     if len(rows)<window: raise ValueError('Insufficient data')
     folds=[]
@@ -15,14 +15,16 @@ def walk_forward(rows, window=6000, step=1500):
         results={h:forecast([r['close'] for r in sample],[r['volume'] for r in sample],h) for h in HORIZONS}
         folds.append(dict(start=sample[0]['t'],end=sample[-1]['t'],results=results))
     return dict(protocol='rolling-purged-55-20-25',window=window,step=step,
-                execution_backtest=False,source='Binance spot closed 5m candles',folds=folds)
+                execution_backtest=False,source=source+' closed 5m candles',folds=folds)
 
 async def main():
     parser=argparse.ArgumentParser(); parser.add_argument('symbol'); parser.add_argument('--output',default='backtest.json')
+    parser.add_argument('--source',choices=('binance','bitunix'),default='binance')
     args=parser.parse_args(); store.init()
-    if args.symbol not in {x['symbol'] for x in await market.assets()}: raise ValueError('Unknown symbol')
-    rows=await market.ingest(args.symbol)
-    report=await asyncio.to_thread(walk_forward,rows)
+    provider=market if args.source=='binance' else bitunix
+    if args.symbol not in {x['symbol'] for x in await provider.assets()}: raise ValueError('Unknown symbol')
+    rows=await provider.ingest(args.symbol)
+    report=await asyncio.to_thread(walk_forward,rows,source='Binance spot' if args.source=='binance' else 'Bitunix futures LAST_PRICE')
     Path(args.output).write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(f"Saved {len(report['folds'])} real-data folds to {args.output}")
 

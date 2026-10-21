@@ -73,13 +73,17 @@ class MainActivity: ComponentActivity() {
                 item { Button(onClick={vm.connect(url,token); page="Mercado"},modifier=Modifier.fillMaxWidth()) { Text("Conectar") } }
                 item { Text("Datos: Binance spot. SHORT es un escenario hipotético; no se envían órdenes. Los resultados no están garantizados.") }
             } else {
+                item { Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
+                    FilterChip(state.source=="binance",{vm.chooseSource("binance")},label={Text("Binance · spot")})
+                    FilterChip(state.source=="bitunix",{vm.chooseSource("bitunix")},label={Text("Bitunix · futuros")})
+                } }
                 item { LazyRow(horizontalArrangement=Arrangement.spacedBy(8.dp)) { items(state.watch) { symbol->FilterChip(selected=state.symbol==symbol,onClick={vm.select(symbol)},label={Text(symbol.removeSuffix("USDT"))}) } } }
                 item {
                     Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Panel,Color(0xFF193C43))),RoundedCornerShape(26.dp)).padding(22.dp)) {
                         Text(state.symbol,color=Mint,fontWeight=FontWeight.Bold)
                         Text(state.price?.let { "$"+number(it) } ?: "—",fontSize=38.sp,fontWeight=FontWeight.Bold)
                         val fresh=state.connected && now-state.tick<15000
-                        Text(if(fresh) "● EN VIVO · Binance spot" else "○ Esperando precio actualizado",color=if(fresh) Mint else Color(0xFFFFC478),fontSize=12.sp)
+                        Text(if(fresh) "● EN VIVO · ${if(state.source=="bitunix") "Bitunix futuros" else "Binance spot"}" else "○ Esperando precio actualizado",color=if(fresh) Mint else Color(0xFFFFC478),fontSize=12.sp)
                         if(state.tick>0) Text("Último dato: ${java.util.Date(state.tick)}",fontSize=10.sp)
                     }
                 }

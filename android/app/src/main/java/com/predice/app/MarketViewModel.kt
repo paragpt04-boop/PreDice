@@ -12,7 +12,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 data class MarketState(
-    val symbol: String = "BTCUSDT", val watch: List<String> = emptyList(),
+    val symbol: String = "BTCUSDT", val source: String = "binance", val watch: List<String> = emptyList(),
     val search: List<Pair<String,String>> = emptyList(), val price: Double? = null,
     val tick: Long = 0, val connected: Boolean = false, val error: String? = null,
     val candles: List<Double> = emptyList(), val forecasts: List<JSONObject> = emptyList(),
@@ -29,6 +29,7 @@ class MarketViewModel: ViewModel() {
     private var polling: Job? = null
     private var selection = 0
     private var searchJob: Job? = null
+    private fun path(path: String)=path+(if(path.contains('?')) "&" else "?")+"source=${mutable.value.source}"
     private fun update(f: (MarketState)->MarketState) { synchronized(mutable) { mutable.value=f(mutable.value) } }
     private suspend fun request(path: String, method: String="GET", data: JSONObject?=null): String = withContext(Dispatchers.IO) {
         val body=if(method in listOf("POST","PUT")) (data?.toString() ?: "").toRequestBody("application/json".toMediaType()) else null
@@ -46,18 +47,24 @@ class MarketViewModel: ViewModel() {
         searchJob?.cancel()
         searchJob=viewModelScope.launch {
             delay(350)
-            try { val data=JSONArray(request("/assets?q="+java.net.URLEncoder.encode(query,"UTF-8")))
+            try { val data=JSONArray(request(path("/assets?q="+java.net.URLEncoder.encode(query,"UTF-8"))))
                 update { it.copy(search=data.objects().map { a->a.getString("symbol") to a.getString("name") },error=null) }
             } catch(e: CancellationException) { throw e } catch(e: Exception) { update { it.copy(error=e.message) } }
         }
     }
     fun add(symbol: String) = viewModelScope.launch {
-        try { request("/watchlist/$symbol","PUT"); update { it.copy(search=emptyList()) }; select(symbol) }
+        try { request(path("/watchlist/$symbol"),"PUT"); update { it.copy(search=emptyList()) }; select(symbol) }
         catch(e: Exception) { update { it.copy(error=e.message) } }
     }
     fun remove() = viewModelScope.launch {
-        try { request("/watchlist/${mutable.value.symbol}","DELETE"); select(mutable.value.symbol) }
+        try { request(path("/watchlist/${mutable.value.symbol}"),"DELETE"); select(mutable.value.symbol) }
         catch(e: Exception) { update { it.copy(error=e.message) } }
+    }
+    fun chooseSource(source: String) {
+        if(source==mutable.value.source) return
+        socket?.cancel(); polling?.cancel(); searchJob?.cancel(); selection++
+        update { it.copy(source=source,watch=emptyList(),search=emptyList(),forecasts=emptyList(),history=emptyList(),alerts=emptyList(),price=null,connected=false) }
+        select("BTCUSDT")
     }
     fun select(symbol: String) {
         if(base.isBlank()) return
@@ -67,11 +74,11 @@ class MarketViewModel: ViewModel() {
         polling=viewModelScope.launch {
             while(isActive && generation==selection) {
                 try {
-                    val watch=JSONArray(request("/watchlist"))
-                    val candles=JSONArray(request("/candles/$symbol"))
-                    val forecasts=JSONObject(request("/predictions/$symbol"))
-                    val history=JSONArray(request("/history/$symbol"))
-                    val alerts=JSONArray(request("/alerts"))
+                    val watch=JSONArray(request(path("/watchlist")))
+                    val candles=JSONArray(request(path("/candles/$symbol")))
+                    val forecasts=JSONObject(request(path("/predictions/$symbol")))
+                    val history=JSONArray(request(path("/history/$symbol")))
+                    val alerts=JSONArray(request(path("/alerts")))
                     if(generation==selection) update { it.copy(watch=List(watch.length()){i->watch.getString(i)},
                         candles=candles.objects().map {c->c.getDouble("close")}, forecasts=forecasts.getJSONArray("items").objects(),
                         history=history.objects(),alerts=alerts.objects(),status=forecasts.getString("state"),error=null) }
@@ -83,7 +90,7 @@ class MarketViewModel: ViewModel() {
     }
     private fun openSocket(symbol: String,generation: Int) {
         socket?.cancel()
-        socket=client.newWebSocket(Request.Builder().url(base.replaceFirst("https://","wss://")+"/ws/$symbol").header("Authorization","Bearer $token").build(),object: WebSocketListener() {
+        socket=client.newWebSocket(Request.Builder().url(base.replaceFirst("https://","wss://")+path("/ws/$symbol")).header("Authorization","Bearer $token").build(),object: WebSocketListener() {
             override fun onMessage(webSocket: WebSocket,text: String) {
                 runCatching { JSONObject(text) }.onSuccess { j-> if(generation==selection) update { it.copy(price=j.getDouble("price"),tick=j.getLong("timestamp"),connected=true) } }
             }
@@ -99,7 +106,7 @@ class MarketViewModel: ViewModel() {
         } catch(e: Exception) { update { it.copy(error="Revisa los importes: ${e.message}") } }
     }
     fun alert(threshold: String,above: Boolean) = viewModelScope.launch {
-        try { request("/alerts","POST",JSONObject().put("symbol",mutable.value.symbol).put("threshold",threshold.toDouble()).put("above",above)); update { it.copy(status="Alerta guardada") } }
+        try { request("/alerts","POST",JSONObject().put("symbol",mutable.value.symbol).put("source",mutable.value.source).put("threshold",threshold.toDouble()).put("above",above)); update { it.copy(status="Alerta guardada") } }
         catch(e: Exception) { update { it.copy(error=e.message) } }
     }
     override fun onCleared() { socket?.cancel(); polling?.cancel(); client.dispatcher.executorService.shutdown() }
