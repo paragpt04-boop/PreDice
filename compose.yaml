@@ -1,0 +1,20 @@
+services:
+  api:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      PREDICE_DB: /data/predice.sqlite3
+      PREDICE_ALLOWED_ORIGINS: ""
+    ports:
+      - "127.0.0.1:8097:8097"
+    volumes:
+      - predice_data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  predice_data:
