@@ -91,8 +91,8 @@ def forecast(close, volume, horizon):
                  and score["coverage90"] >= .85 and score["nonoverlap_samples"] >= 100
                  and score["mae_pct"] < score["zero_return_mae_pct"])
     side = "WAIT"
-    if qualified and expected_return-q > .002 and up >= .6: side="LONG"
-    if qualified and expected_return+q < -.002 and up <= .4: side="SHORT"
+    if qualified and expected_return-q > .003 and up >= .6: side="LONG"
+    if qualified and expected_return+q < -.003 and up <= .4: side="SHORT"
     price = float(c[-1]); direction = 1 if side=="LONG" else -1
     risk = max(q, .003)
     return dict(horizon=horizon, model=VERSION, fit_hash=fit_hash,
