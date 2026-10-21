@@ -20,8 +20,8 @@ def quantile(data: list[float], q: float) -> float:
     low = int(x)
     return a[low] + (a[min(low + 1, len(a) - 1)] - a[low]) * (x - low)
 
-def features(candles: list[Candle], i: int) -> tuple[float, ...]:
-    closes = [x.close for x in candles]
+def features(candles: list[Candle], i: int, closes: list[float] | None = None) -> tuple[float, ...]:
+    if closes is None: closes = [x.close for x in candles]
     rets = [math.log(closes[k] / closes[k-1]) for k in range(i - 23, i + 1)]
     mean = sum(rets) / len(rets)
     sigma = math.sqrt(sum((r-mean)**2 for r in rets) / len(rets))
@@ -44,12 +44,13 @@ def forecast(candles: list[Candle], horizon_bars: int, asof: int | None = None, 
     t = len(candles) - 1 if asof is None else asof
     h = horizon_bars
     if t < max(240, 60 + h) or h < 1: return None
-    current = features(candles, t)
+    closes = [x.close for x in candles]
+    current = features(candles, t, closes)
     candidates = []
     for i in range(30, t-h+1):
         if candles[i+h].ts - candles[i].ts != h * (candles[i+1].ts - candles[i].ts):
             continue  # skip broken/missing timestamp windows
-        f = features(candles, i)
+        f = features(candles, i, closes)
         target = (candles[i+h].close/candles[i].close-1)*100
         candidates.append((f, target))
     if len(candidates) < 150: return None
