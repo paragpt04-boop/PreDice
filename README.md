@@ -24,6 +24,7 @@ export PREDICE_TOKEN='GENERAR_UN_SECRETO_PROPIO'
 uvicorn predice.app:app --host 127.0.0.1 --port 8080
 python -m pytest -q
 python -m predice.backtest BTCUSDT --output backtest.json
+python -m predice.backtest BTCUSDT --source bitunix --output bitunix-backtest.json
 ```
 
 El servicio precarga BTC/ETH/SOL y necesita acceso público a Binance. Errores o huecos inhiben nuevos pronósticos; los anteriores se marcan obsoletos. Los enlaces nunca se descargan. La API requiere Bearer excepto /health. Esta es una instancia personal, no multiusuario.
