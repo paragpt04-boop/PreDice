@@ -58,6 +58,9 @@ def forecast(close, volume, horizon):
     clf = LogisticRegression(C=.1, max_iter=1000).fit(z[tr], labels[tr])
     calibrator = LogisticRegression(C=1, max_iter=1000).fit(
         clf.decision_function(z[ca]).reshape(-1,1), labels[ca])
+    fit_hash=hashlib.sha256(b''.join(np.asarray(a).tobytes() for a in
+        (scaler.mean_,scaler.scale_,reg.coef_,reg.intercept_,clf.coef_,clf.intercept_,
+         calibrator.coef_,calibrator.intercept_))).hexdigest()
     def probability(a):
         return calibrator.predict_proba(clf.decision_function(a).reshape(-1,1))[:,1]
     residual = abs(y[ca]-reg.predict(z[ca]))
@@ -81,7 +84,7 @@ def forecast(close, volume, horizon):
     if qualified and expected+q < -.002 and up <= .4: side="SHORT"
     price = float(c[-1]); direction = 1 if side=="LONG" else -1
     risk = max(q, .003)
-    return dict(horizon=horizon, model=VERSION,
+    return dict(horizon=horizon, model=VERSION, fit_hash=fit_hash,
         data_hash=hashlib.sha256(c.tobytes()+np.asarray(volume,float).tobytes()).hexdigest(),
         probability_up=up, expected_pct=expected*100, lower_pct=(expected-q)*100,
         upper_pct=(expected+q)*100, interval_nominal=.9, metrics=score,

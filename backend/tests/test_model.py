@@ -26,6 +26,7 @@ def test_future_cannot_change_scaling_training_or_calibration():
     assert 0<a['probability_up']<1
     assert a['lower_pct']<=a['expected_pct']<=a['upper_pct']
     assert a['data_hash']!=b['data_hash']
+    assert a['fit_hash']==b['fit_hash']
 
 def test_no_short_history():
     c,v=series(150)
