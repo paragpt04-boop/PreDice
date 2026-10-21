@@ -28,8 +28,8 @@ def remember(symbol,horizon,asof_ms,target_ms,base_price,pred,signal):
             (symbol,horizon,asof_ms,target_ms,base_price,pred.expected_pct,pred.up_vote,
              pred.p10_pct,pred.p90_pct,signal))
 
-def resolve(symbol: str, candles: list[Candle]):
-    by_close_time = {x.ts: x.close for x in candles}
+def resolve(symbol: str, candles: list[Candle], interval_ms: int):
+    by_close_time = {x.ts + interval_ms: x.close for x in candles}
     with connect() as c:
         pending=c.execute("SELECT horizon,asof_ms,target_ms,base_price FROM forecasts WHERE symbol=? AND resolved_ms IS NULL",(symbol,)).fetchall()
         for row in pending:
