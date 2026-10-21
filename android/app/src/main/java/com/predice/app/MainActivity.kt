@@ -89,6 +89,7 @@ class MainActivity: ComponentActivity() {
                     item { Text("Últimas 24 horas",style=MaterialTheme.typography.titleLarge) }
                     item { PriceChart(state.candles) }
                     item { Text(state.status,color=Color(0xFF94A6C2)) }
+                    if(state.symbol in state.watch) item { TextButton(onClick={vm.remove()}) { Text("Quitar de seguimiento") } }
                     item { Button(onClick={page="Análisis"},modifier=Modifier.fillMaxWidth()) { Text("Explorar predicciones →") } }
                 }
                 if(page=="Análisis") {
@@ -96,7 +97,7 @@ class MainActivity: ComponentActivity() {
                     val prediction=state.forecasts.firstOrNull { it.optString("horizon")==horizon }
                     if(prediction==null) item { Text("Recopilando histórico y evaluando el modelo. No hay una predicción disponible todavía.") }
                     else item {
-                        val stale=prediction.optBoolean("stale") || now-(prediction.optLong("origin")+300000)>420000
+                        val stale=prediction.optBoolean("stale") || now-(prediction.optLong("origin")+300000)>420000 || now>=prediction.optLong("target")+300000
                         Column(Modifier.fillMaxWidth().background(Panel,RoundedCornerShape(24.dp)).padding(20.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
                             Text(if(stale) "ESPERAR · Dato desactualizado" else prediction.getString("signal"),color=Mint,fontSize=23.sp,fontWeight=FontWeight.Bold)
                             Text("Movimiento esperado: ${number(prediction.getDouble("expected_pct"))}%",fontSize=20.sp)

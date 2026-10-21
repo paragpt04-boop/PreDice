@@ -1,6 +1,7 @@
 import json
 import os
 import sqlite3
+import time
 from pathlib import Path
 
 DB = os.getenv("PREDICE_DB", "data/predice.db")
@@ -20,10 +21,13 @@ def init():
         CREATE TABLE IF NOT EXISTS watch(symbol TEXT PRIMARY KEY);
         CREATE TABLE IF NOT EXISTS predictions(id INTEGER PRIMARY KEY, symbol TEXT, horizon TEXT,
           origin INTEGER, target INTEGER, payload TEXT, outcome REAL, settled INTEGER,
+          issued_at INTEGER,
           UNIQUE(symbol,horizon,origin));
         CREATE TABLE IF NOT EXISTS alerts(id INTEGER PRIMARY KEY, symbol TEXT, threshold REAL,
           above INTEGER, fired INTEGER);
         ''')
+        if 'issued_at' not in {r[1] for r in db.execute('PRAGMA table_info(predictions)')}:
+            db.execute('ALTER TABLE predictions ADD COLUMN issued_at INTEGER')
         for symbol in ("BTCUSDT","ETHUSDT","SOLUSDT"):
             db.execute("INSERT OR IGNORE INTO watch VALUES (?)", (symbol,))
 
@@ -33,8 +37,8 @@ def candles(symbol):
 
 def save_prediction(symbol, origin, horizon, payload, steps):
     with connect() as db:
-        db.execute("INSERT OR IGNORE INTO predictions(symbol,horizon,origin,target,payload) VALUES(?,?,?,?,?)",
-                   (symbol,horizon,origin,origin+steps*300000,json.dumps(payload)))
+        db.execute("INSERT OR IGNORE INTO predictions(symbol,horizon,origin,target,payload,issued_at) VALUES(?,?,?,?,?,?)",
+                   (symbol,horizon,origin,origin+steps*300000,json.dumps(payload),int(time.time()*1000)))
 
 def settle(symbol):
     with connect() as db:

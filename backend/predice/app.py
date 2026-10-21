@@ -108,8 +108,9 @@ def predictions(symbol: str):
     results=[]
     for r in rows:
         item=json.loads(r['payload'])
-        stale=time.time()*1000-(r['origin']+300000)>420000
-        item.update(origin=r['origin'],target=r['target'],stale=stale)
+        now=time.time()*1000
+        stale=now-(r['origin']+300000)>420000 or now>=r['target']+300000
+        item.update(origin=r['origin'],target=r['target'],issued_at=r['issued_at'],stale=stale)
         if stale: item.update(signal='WAIT',entry=None,stop=None,take_profit=None,reason='Stale prediction')
         results.append(item)
     return {'state':status.get(symbol,'collecting'),'items':results}

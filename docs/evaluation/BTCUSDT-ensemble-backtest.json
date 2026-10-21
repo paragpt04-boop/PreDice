@@ -1,0 +1,2016 @@
+{
+  "protocol": "rolling-purged-55-20-25",
+  "window": 6000,
+  "step": 1500,
+  "execution_backtest": false,
+  "source": "Binance spot closed 5m candles",
+  "folds": [
+    {
+      "start": 1787747700000,
+      "end": 1789547400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "6f5c8220b30cf71b661861e8d96e73d0eb0c878f57a9863bc3f4dcfc928a68d8",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.47670697039678317,
+          "expected_pct": 0.0010818090296977811,
+          "lower_pct": -0.1450309393694243,
+          "upper_pct": 0.14719455742881987,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2511611437904361,
+            "ece": 0.037167015031330505,
+            "mae_pct": 0.06979870735526272,
+            "coverage90": 0.8812415654520918,
+            "reliability": [
+              {
+                "count": 1481,
+                "probability": 0.47360801327837393,
+                "frequency": 0.5104659014179609
+              },
+              {
+                "count": 1,
+                "probability": 0.5050160582964756,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.2501914030495297,
+            "zero_return_mae_pct": 0.06964840429008276,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.2511611437904361
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "68d3b22c1a6cc5578360ae7e467225e2a284fb3ae8c5629b40cc9ccbe5f55d9e",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.5256830588213192,
+          "expected_pct": -0.004521914412559789,
+          "lower_pct": -0.276246032983033,
+          "upper_pct": 0.26720220415791346,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24866086192084377,
+            "ece": 0.00548628745262141,
+            "mae_pct": 0.1192640951246415,
+            "coverage90": 0.9014844804318488,
+            "reliability": [
+              {
+                "count": 1020,
+                "probability": 0.4674696020400674,
+                "frequency": 0.4666666666666667
+              },
+              {
+                "count": 462,
+                "probability": 0.524484164337481,
+                "frequency": 0.5086580086580087
+              }
+            ],
+            "baseline_brier": 0.25005788246788774,
+            "zero_return_mae_pct": 0.11828519767360868,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.24738091876473084
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "127847c64864cc597c3ecc64cdf0aeb4b330dcf98926568d29ea11f173965045",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.4624783783801757,
+          "expected_pct": -0.04919926754743897,
+          "lower_pct": -0.5607230474279594,
+          "upper_pct": 0.4623245123330816,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25055445866983816,
+            "ece": 0.02635931692533683,
+            "mae_pct": 0.23595453627612648,
+            "coverage90": 0.8816768086544963,
+            "reliability": [
+              {
+                "count": 1479,
+                "probability": 0.4624844964620871,
+                "frequency": 0.48884381338742394
+              }
+            ],
+            "baseline_brier": 0.25091828942590566,
+            "zero_return_mae_pct": 0.23305332333247333,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.24960436618447285
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "fb0f2cb28c5594de54c59e1ed1c1dcb9a875bb176443137770a920a988e6008d",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.3973785951247532,
+          "expected_pct": 0.1110587812106083,
+          "lower_pct": -0.7682296230844319,
+          "upper_pct": 0.9903471855056486,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2630579576858388,
+            "ece": 0.11400425425844171,
+            "mae_pct": 0.5113945012110098,
+            "coverage90": 0.8285714285714286,
+            "reliability": [
+              {
+                "count": 870,
+                "probability": 0.38144618167484573,
+                "frequency": 0.4908045977011494
+              },
+              {
+                "count": 600,
+                "probability": 0.41092594697162477,
+                "frequency": 0.5316666666666666
+              }
+            ],
+            "baseline_brier": 0.25056132584103785,
+            "zero_return_mae_pct": 0.49106366422152326,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2762981035116849
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "6aa209a03d1a7302c67dc23d804f45830819b003aeb944e7f0bf6f633e23a4ac",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.2983112928615951,
+          "expected_pct": -0.03934035240069965,
+          "lower_pct": -1.6076001978440557,
+          "upper_pct": 1.5289194930426564,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.42376663410143145,
+            "ece": 0.4339906761701277,
+            "mae_pct": 1.133975989890697,
+            "coverage90": 0.6886524822695036,
+            "reliability": [
+              {
+                "count": 588,
+                "probability": 0.05365641905159054,
+                "frequency": 0.5527210884353742
+              },
+              {
+                "count": 241,
+                "probability": 0.14430713951920646,
+                "frequency": 0.6141078838174274
+              },
+              {
+                "count": 242,
+                "probability": 0.24491611231013133,
+                "frequency": 0.47520661157024796
+              },
+              {
+                "count": 177,
+                "probability": 0.3398818106246202,
+                "frequency": 0.6214689265536724
+              },
+              {
+                "count": 42,
+                "probability": 0.4420662878571891,
+                "frequency": 0.07142857142857142
+              },
+              {
+                "count": 35,
+                "probability": 0.543852451764069,
+                "frequency": 0.0
+              },
+              {
+                "count": 28,
+                "probability": 0.6501151715513348,
+                "frequency": 0.0
+              },
+              {
+                "count": 30,
+                "probability": 0.7497519286136518,
+                "frequency": 0.0
+              },
+              {
+                "count": 12,
+                "probability": 0.8554952737063569,
+                "frequency": 0.0
+              },
+              {
+                "count": 15,
+                "probability": 0.941352149192394,
+                "frequency": 0.0
+              }
+            ],
+            "baseline_brier": 0.2531438519678263,
+            "zero_return_mae_pct": 1.0986625343342664,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.33614273130780764
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1788197700000,
+      "end": 1789997400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "e67b92a6dad437f8b984be21acdfe524d30257827d4e04d5e5e09421c15799e7",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.5045351818188917,
+          "expected_pct": 0.005502185064489528,
+          "lower_pct": -0.14930451467745717,
+          "upper_pct": 0.1603088848064362,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24945755158463162,
+            "ece": 0.02036296415737185,
+            "mae_pct": 0.0772123182151104,
+            "coverage90": 0.8832658569500674,
+            "reliability": [
+              {
+                "count": 50,
+                "probability": 0.4979899630315128,
+                "frequency": 0.52
+              },
+              {
+                "count": 1432,
+                "probability": 0.5097224783290498,
+                "frequency": 0.5300279329608939
+              }
+            ],
+            "baseline_brier": 0.25065553160603066,
+            "zero_return_mae_pct": 0.07690382311693636,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.24945755158463162
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "72bada23005ebb70da35c8dc6d4213bb19f952b61f742701a496914d65137f37",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.4751429567627439,
+          "expected_pct": 0.001157821955932435,
+          "lower_pct": -0.2596797589333097,
+          "upper_pct": 0.26199540284517453,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2514611848819927,
+            "ece": 0.05405725311878079,
+            "mae_pct": 0.13529358130249775,
+            "coverage90": 0.8717948717948718,
+            "reliability": [
+              {
+                "count": 1443,
+                "probability": 0.478352035376185,
+                "frequency": 0.5294525294525294
+              },
+              {
+                "count": 39,
+                "probability": 0.5032093289777403,
+                "frequency": 0.6666666666666666
+              }
+            ],
+            "baseline_brier": 0.2503844258047664,
+            "zero_return_mae_pct": 0.1340739101677032,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.25230386406708744
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "820b50577c316b0b11a15585b6dbfc1593ac0b23df43f7b3ce5c82cc55eede37",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.4771817421393357,
+          "expected_pct": -0.04837417685346573,
+          "lower_pct": -0.5702361186284876,
+          "upper_pct": 0.4734877649215561,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25289783006916333,
+            "ece": 0.07349721169450396,
+            "mae_pct": 0.2742349417858759,
+            "coverage90": 0.8762677484787018,
+            "reliability": [
+              {
+                "count": 1479,
+                "probability": 0.4707894684948132,
+                "frequency": 0.5442866801893171
+              }
+            ],
+            "baseline_brier": 0.24987894722304205,
+            "zero_return_mae_pct": 0.2732101237611015,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.253645811416972
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "9c4fde505b6e2fd85d3c2a29d5fa3abc2d08193d748e79efb323b3258c373089",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.5305695373440762,
+          "expected_pct": -0.08982886865505546,
+          "lower_pct": -1.0936607037437345,
+          "upper_pct": 0.9140029664336234,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.24634124089799694,
+            "ece": 0.14355658258891202,
+            "mae_pct": 0.6208907746451432,
+            "coverage90": 0.8523809523809524,
+            "reliability": [
+              {
+                "count": 85,
+                "probability": 0.49646554770994755,
+                "frequency": 0.4235294117647059
+              },
+              {
+                "count": 1385,
+                "probability": 0.5142031733932454,
+                "frequency": 0.6620938628158844
+              }
+            ],
+            "baseline_brier": 0.2510359584716373,
+            "zero_return_mae_pct": 0.598239340422204,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.24487888965633053
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "76798dbbf27a7512ea409205b7096608a7ef81a05b70abc6b4e3110955fe83ed",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.8319113295678976,
+          "expected_pct": -0.6389704304949589,
+          "lower_pct": -3.1359027849407015,
+          "upper_pct": 1.8579619239507832,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.23507372802476473,
+            "ece": 0.172720783602041,
+            "mae_pct": 2.0243055610221825,
+            "coverage90": 0.7297872340425532,
+            "reliability": [
+              {
+                "count": 3,
+                "probability": 0.08328341479182606,
+                "frequency": 1.0
+              },
+              {
+                "count": 16,
+                "probability": 0.1458348056849592,
+                "frequency": 0.875
+              },
+              {
+                "count": 36,
+                "probability": 0.26578868091015107,
+                "frequency": 0.75
+              },
+              {
+                "count": 78,
+                "probability": 0.3470405449465673,
+                "frequency": 0.7564102564102564
+              },
+              {
+                "count": 174,
+                "probability": 0.4572735329857698,
+                "frequency": 0.8160919540229885
+              },
+              {
+                "count": 275,
+                "probability": 0.5562355884448414,
+                "frequency": 0.7890909090909091
+              },
+              {
+                "count": 408,
+                "probability": 0.6533230705938946,
+                "frequency": 0.7377450980392157
+              },
+              {
+                "count": 315,
+                "probability": 0.7485969938397986,
+                "frequency": 0.6952380952380952
+              },
+              {
+                "count": 105,
+                "probability": 0.8193829365470292,
+                "frequency": 0.8
+              }
+            ],
+            "baseline_brier": 0.32433287201149325,
+            "zero_return_mae_pct": 1.9351396685325695,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.2400975951991023
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1788647700000,
+      "end": 1790447400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "ee83122972813de990d9fd95fa4bfb4f913f5ad1ee2c126ebd0fd1ce47b81aa5",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5361893487648287,
+          "expected_pct": -0.0012906438565212421,
+          "lower_pct": -0.17140229214087654,
+          "upper_pct": 0.16882100442783407,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2518522716716758,
+            "ece": 0.04454472395946102,
+            "mae_pct": 0.07733565326719527,
+            "coverage90": 0.8960863697705803,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.5364475579675582,
+                "frequency": 0.49190283400809715
+              }
+            ],
+            "baseline_brier": 0.24995391863450644,
+            "zero_return_mae_pct": 0.07765912317918701,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.2518522716716758
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "3d6522c1bada6e2b69da61a97c9e7b78ca36969da3546a1968b9e659e9b03f77",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5476171481182613,
+          "expected_pct": -0.005410698059041361,
+          "lower_pct": -0.3107601083013646,
+          "upper_pct": 0.2999387121832819,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2529837755909113,
+            "ece": 0.05716407781731381,
+            "mae_pct": 0.13436564982704566,
+            "coverage90": 0.9055330634278003,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.5483921479927524,
+                "frequency": 0.49122807017543857
+              }
+            ],
+            "baseline_brier": 0.24996446817951676,
+            "zero_return_mae_pct": 0.13517017253818814,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2527140982625063
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "fbeac27ca3c57fcdb92aaed7685d4278ab6eb1ce66529e6098d634f9d4b1969a",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5688256365566726,
+          "expected_pct": -0.015494188345088622,
+          "lower_pct": -0.657284411879345,
+          "upper_pct": 0.6262960351891679,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25297540401957774,
+            "ece": 0.07714361857122694,
+            "mae_pct": 0.24389241106722467,
+            "coverage90": 0.9384719405003381,
+            "reliability": [
+              {
+                "count": 50,
+                "probability": 0.48856506160776775,
+                "frequency": 0.6
+              },
+              {
+                "count": 1280,
+                "probability": 0.5550944210984678,
+                "frequency": 0.47421875
+              },
+              {
+                "count": 149,
+                "probability": 0.6241799056455988,
+                "frequency": 0.5906040268456376
+              }
+            ],
+            "baseline_brier": 0.2499095650276773,
+            "zero_return_mae_pct": 0.2419769147707186,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2559074332854293
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "2599917b8738d07fad53f0df758d24bcd45ef50c28ff38a1821da07971d6fd0e",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.6540274665002687,
+          "expected_pct": -0.03168606516802247,
+          "lower_pct": -1.3974384318788726,
+          "upper_pct": 1.3340663015428278,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2720030595121835,
+            "ece": 0.14832376386036117,
+            "mae_pct": 0.5252065423349528,
+            "coverage90": 0.9496598639455782,
+            "reliability": [
+              {
+                "count": 1470,
+                "probability": 0.6510448522957353,
+                "frequency": 0.5027210884353741
+              }
+            ],
+            "baseline_brier": 0.2501804679393069,
+            "zero_return_mae_pct": 0.48229545849671934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2578731574855232
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "506285535cf05e87fef1dfee4927ee553556e03ae9b3e01971774dff013005ce",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.458541916201603,
+          "expected_pct": -0.1590258690591059,
+          "lower_pct": -6.793617907575557,
+          "upper_pct": 6.475566169457346,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.35019713901270205,
+            "ece": 0.2963434753337205,
+            "mae_pct": 1.8463737127933915,
+            "coverage90": 0.9673758865248226,
+            "reliability": [
+              {
+                "count": 19,
+                "probability": 0.16827338916160892,
+                "frequency": 1.0
+              },
+              {
+                "count": 49,
+                "probability": 0.24631676393602353,
+                "frequency": 0.8979591836734694
+              },
+              {
+                "count": 65,
+                "probability": 0.3474025888962183,
+                "frequency": 0.4153846153846154
+              },
+              {
+                "count": 117,
+                "probability": 0.46077059499948914,
+                "frequency": 0.4700854700854701
+              },
+              {
+                "count": 268,
+                "probability": 0.5496415002837471,
+                "frequency": 0.41044776119402987
+              },
+              {
+                "count": 238,
+                "probability": 0.6443869382558064,
+                "frequency": 0.3907563025210084
+              },
+              {
+                "count": 243,
+                "probability": 0.7541522566926316,
+                "frequency": 0.42386831275720166
+              },
+              {
+                "count": 170,
+                "probability": 0.8419405896291207,
+                "frequency": 0.3235294117647059
+              },
+              {
+                "count": 241,
+                "probability": 0.9607694271638587,
+                "frequency": 0.5518672199170125
+              }
+            ],
+            "baseline_brier": 0.26512363738067773,
+            "zero_return_mae_pct": 1.4684385493959196,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.44409203080779164
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789097700000,
+      "end": 1790897400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "858080079ebc61c351d99c6b4ff48a252cb0db4577434028b6ad68423fffc6e8",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.4790648191907226,
+          "expected_pct": 0.002198898284844213,
+          "lower_pct": -0.16204646357033056,
+          "upper_pct": 0.16644426014001898,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.250406733163984,
+            "ece": 0.014069186511144053,
+            "mae_pct": 0.07562610664168713,
+            "coverage90": 0.8967611336032388,
+            "reliability": [
+              {
+                "count": 987,
+                "probability": 0.47596844294952767,
+                "frequency": 0.49442755825734547
+              },
+              {
+                "count": 494,
+                "probability": 0.5186899662486997,
+                "frequency": 0.5141700404858299
+              },
+              {
+                "count": 1,
+                "probability": 0.6014557261583371,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.25031078069899365,
+            "zero_return_mae_pct": 0.07502585131959486,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.250406733163984
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "390e6d3720c74e1783c243f9083e1ff8e0edd331f61085b1b00ee1ab40bf56ea",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.4521620302579147,
+          "expected_pct": 0.0019546642067516055,
+          "lower_pct": -0.2816045155437441,
+          "upper_pct": 0.2855138439572473,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2511744285154079,
+            "ece": 0.03948047859181736,
+            "mae_pct": 0.12661606059457706,
+            "coverage90": 0.9021592442645074,
+            "reliability": [
+              {
+                "count": 923,
+                "probability": 0.46635468892140103,
+                "frequency": 0.5178764897074756
+              },
+              {
+                "count": 544,
+                "probability": 0.5285938207613913,
+                "frequency": 0.5128676470588235
+              },
+              {
+                "count": 15,
+                "probability": 0.6266939102219754,
+                "frequency": 0.4666666666666667
+              }
+            ],
+            "baseline_brier": 0.24977768507519005,
+            "zero_return_mae_pct": 0.12625012754466683,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.249004682188671
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "232c9ca42cb3881ec7e829a0e76d59140eff34d1382a5915c7ca7fbd75b3e023",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.45307683599810167,
+          "expected_pct": 0.060667501793125626,
+          "lower_pct": -0.4480535034469406,
+          "upper_pct": 0.5693885070331919,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25317076871008115,
+            "ece": 0.06109435761830573,
+            "mae_pct": 0.26119613325098495,
+            "coverage90": 0.8735632183908046,
+            "reliability": [
+              {
+                "count": 11,
+                "probability": 0.39570043160828,
+                "frequency": 0.6363636363636364
+              },
+              {
+                "count": 1003,
+                "probability": 0.46528232769050254,
+                "frequency": 0.5264207377866401
+              },
+              {
+                "count": 463,
+                "probability": 0.5208901933983294,
+                "frequency": 0.46436285097192226
+              },
+              {
+                "count": 2,
+                "probability": 0.6086373976563796,
+                "frequency": 0.5
+              }
+            ],
+            "baseline_brier": 0.250045105766487,
+            "zero_return_mae_pct": 0.25646961138998264,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2524826800627953
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "0e8a50816fed84a6520a61e18c9927d61649032c61a5ebeb3d3d9a21c1dfe338",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.3825703855213218,
+          "expected_pct": 0.2850772550537308,
+          "lower_pct": -1.0112668116018682,
+          "upper_pct": 1.5814213217093296,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.27823947196702287,
+            "ece": 0.18648704778769773,
+            "mae_pct": 0.4873298716509278,
+            "coverage90": 0.9448979591836735,
+            "reliability": [
+              {
+                "count": 87,
+                "probability": 0.27911634188116946,
+                "frequency": 0.47126436781609193
+              },
+              {
+                "count": 499,
+                "probability": 0.35104949670613034,
+                "frequency": 0.5671342685370742
+              },
+              {
+                "count": 432,
+                "probability": 0.4497184961925676,
+                "frequency": 0.6226851851851852
+              },
+              {
+                "count": 348,
+                "probability": 0.540409130434731,
+                "frequency": 0.3994252873563218
+              },
+              {
+                "count": 86,
+                "probability": 0.6466855047493104,
+                "frequency": 0.3488372093023256
+              },
+              {
+                "count": 18,
+                "probability": 0.7114533109223021,
+                "frequency": 0.7222222222222222
+              }
+            ],
+            "baseline_brier": 0.25188689030914935,
+            "zero_return_mae_pct": 0.47900513130854094,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.26499700951093486
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "7306a7d8bced1500949fa4f52e7e89d1de9f24595311be957355d0694ef6d76a",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.22042515110537594,
+          "expected_pct": 1.3677458676875631,
+          "lower_pct": -2.560960062483844,
+          "upper_pct": 5.296451797858969,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.3486576751960417,
+            "ece": 0.31408136182890833,
+            "mae_pct": 1.3368522348740632,
+            "coverage90": 0.9815602836879432,
+            "reliability": [
+              {
+                "count": 240,
+                "probability": 0.16745055760721653,
+                "frequency": 0.49166666666666664
+              },
+              {
+                "count": 621,
+                "probability": 0.2520823069744889,
+                "frequency": 0.6924315619967794
+              },
+              {
+                "count": 441,
+                "probability": 0.33463451410351164,
+                "frequency": 0.5011337868480725
+              },
+              {
+                "count": 48,
+                "probability": 0.43425000984576273,
+                "frequency": 0.7708333333333334
+              },
+              {
+                "count": 60,
+                "probability": 0.5500631304649277,
+                "frequency": 0.5166666666666667
+              }
+            ],
+            "baseline_brier": 0.24154605507490404,
+            "zero_return_mae_pct": 0.8044160818801136,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.4056312020462882
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789547700000,
+      "end": 1791347400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "0e554a8121e85667dcfd4eaaad936ae39be6fd79f02f04f648419f705799365f",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5104939821401586,
+          "expected_pct": -0.004455094627438801,
+          "lower_pct": -0.19307383293653652,
+          "upper_pct": 0.1841636436816589,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2501379160128274,
+            "ece": 0.008707332629652868,
+            "mae_pct": 0.059857497572276666,
+            "coverage90": 0.9500674763832658,
+            "reliability": [
+              {
+                "count": 363,
+                "probability": 0.4934161507354362,
+                "frequency": 0.5013774104683195
+              },
+              {
+                "count": 1119,
+                "probability": 0.5067152186542528,
+                "frequency": 0.49776586237712245
+              }
+            ],
+            "baseline_brier": 0.25015192021091204,
+            "zero_return_mae_pct": 0.059097306256800305,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.2501379160128274
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "8c7824a1de5ec5e53a952a3c6e635188e416acd86434b2cedb90a7e7bec3bbad",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5181920290836279,
+          "expected_pct": -0.016504607437282017,
+          "lower_pct": -0.3221251797805404,
+          "upper_pct": 0.28911596490597635,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24975456136011054,
+            "ece": 0.008613631760364506,
+            "mae_pct": 0.10231951801290107,
+            "coverage90": 0.9534412955465587,
+            "reliability": [
+              {
+                "count": 22,
+                "probability": 0.4966301051556711,
+                "frequency": 0.2727272727272727
+              },
+              {
+                "count": 1460,
+                "probability": 0.5124386712634004,
+                "frequency": 0.5178082191780822
+              }
+            ],
+            "baseline_brier": 0.24980434566689486,
+            "zero_return_mae_pct": 0.09948879359329676,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.24957067678521336
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "9499ed16f56462430c5a66dc90df0ef48c088d1b3972078f1d2744e36fcce8aa",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5118556102976475,
+          "expected_pct": -0.040452256380298195,
+          "lower_pct": -0.6888067525428597,
+          "upper_pct": 0.6079022397822633,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.24840211571845905,
+            "ece": 0.06455266660220879,
+            "mae_pct": 0.22273633509411211,
+            "coverage90": 0.9310344827586207,
+            "reliability": [
+              {
+                "count": 637,
+                "probability": 0.4809773362769151,
+                "frequency": 0.533751962323391
+              },
+              {
+                "count": 842,
+                "probability": 0.5179857991531334,
+                "frequency": 0.5914489311163895
+              }
+            ],
+            "baseline_brier": 0.24746660062071799,
+            "zero_return_mae_pct": 0.21383018616563335,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.24901063056767572
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "0989419ddadf71363228ca2dce645267e1d222e0f99014d10cdd473b9ef14753",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5132011969751723,
+          "expected_pct": 0.16884025790532195,
+          "lower_pct": -0.9748150290246471,
+          "upper_pct": 1.3124955448352909,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2618272765401339,
+            "ece": 0.12963340042721477,
+            "mae_pct": 0.4990028566298941,
+            "coverage90": 0.8789115646258503,
+            "reliability": [
+              {
+                "count": 161,
+                "probability": 0.37943343401509433,
+                "frequency": 0.7080745341614907
+              },
+              {
+                "count": 972,
+                "probability": 0.4527509577440194,
+                "frequency": 0.5740740740740741
+              },
+              {
+                "count": 334,
+                "probability": 0.5272010660576104,
+                "frequency": 0.5808383233532934
+              },
+              {
+                "count": 3,
+                "probability": 0.6029894982882035,
+                "frequency": 0.0
+              }
+            ],
+            "baseline_brier": 0.2421306331898831,
+            "zero_return_mae_pct": 0.47291851248588934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.26535506474000337
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "94987211353cc518458885ab4dc7d61c5f518116a6f5f727aa02ac264bd11867",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5237585721522128,
+          "expected_pct": 0.21357513785144602,
+          "lower_pct": -2.9613872795227434,
+          "upper_pct": 3.3885375552256356,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.24178062312262652,
+            "ece": 0.10617624475336299,
+            "mae_pct": 1.392826478651458,
+            "coverage90": 0.9361702127659575,
+            "reliability": [
+              {
+                "count": 191,
+                "probability": 0.4935141317466524,
+                "frequency": 0.35602094240837695
+              },
+              {
+                "count": 1219,
+                "probability": 0.5230128745376282,
+                "frequency": 0.6242821985233798
+              }
+            ],
+            "baseline_brier": 0.24316827957348078,
+            "zero_return_mae_pct": 0.9520035450971138,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.23955622745380528
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789997700000,
+      "end": 1791797400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "07321c0fe0fbdfd7f40852d9549d444cab1b4aeb2b1f043fd8a1a65f5af6e9f9",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.5057706142457843,
+          "expected_pct": -0.0024504220144399413,
+          "lower_pct": -0.11809162847016025,
+          "upper_pct": 0.11319078444128035,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24949859156856102,
+            "ece": 0.012427410460191163,
+            "mae_pct": 0.054627646805635977,
+            "coverage90": 0.8744939271255061,
+            "reliability": [
+              {
+                "count": 504,
+                "probability": 0.49124874567057963,
+                "frequency": 0.4722222222222222
+              },
+              {
+                "count": 978,
+                "probability": 0.5120941252392956,
+                "frequency": 0.5030674846625767
+              }
+            ],
+            "baseline_brier": 0.24995467536729962,
+            "zero_return_mae_pct": 0.054111464848421664,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.24949859156856102
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "7a4539f72dd8130c408dbe107b544ff528153eeec0691bd94eb57898ab0d60e4",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.5590932537307014,
+          "expected_pct": 0.01720090263083214,
+          "lower_pct": -0.17876918430106012,
+          "upper_pct": 0.21317098956272437,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2504025651954411,
+            "ece": 0.048065134735567214,
+            "mae_pct": 0.09639552808124681,
+            "coverage90": 0.8771929824561403,
+            "reliability": [
+              {
+                "count": 3,
+                "probability": 0.39053773965985544,
+                "frequency": 1.0
+              },
+              {
+                "count": 219,
+                "probability": 0.479103658765475,
+                "frequency": 0.45662100456621
+              },
+              {
+                "count": 1208,
+                "probability": 0.5403912715239718,
+                "frequency": 0.48841059602649006
+              },
+              {
+                "count": 48,
+                "probability": 0.6218151443121468,
+                "frequency": 0.6041666666666666
+              },
+              {
+                "count": 4,
+                "probability": 0.7101646748775324,
+                "frequency": 0.5
+              }
+            ],
+            "baseline_brier": 0.24997648741774928,
+            "zero_return_mae_pct": 0.09625940160184959,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.24970136087408998
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "a9b952f1fc097d1cfc5398cef029438914e535e309f174f9cac37bb13dd65777",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.6573761438781497,
+          "expected_pct": 0.11057185244096424,
+          "lower_pct": -0.34876537215340037,
+          "upper_pct": 0.5699090770353289,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.2567916740178155,
+            "ece": 0.08423964461774928,
+            "mae_pct": 0.1913502636174054,
+            "coverage90": 0.9046653144016227,
+            "reliability": [
+              {
+                "count": 2,
+                "probability": 0.3807404375230464,
+                "frequency": 0.5
+              },
+              {
+                "count": 97,
+                "probability": 0.46198033257145715,
+                "frequency": 0.41237113402061853
+              },
+              {
+                "count": 910,
+                "probability": 0.5588870095813772,
+                "frequency": 0.46923076923076923
+              },
+              {
+                "count": 470,
+                "probability": 0.6254311580557718,
+                "frequency": 0.5446808510638298
+              }
+            ],
+            "baseline_brier": 0.24995190730724284,
+            "zero_return_mae_pct": 0.18785127096212592,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2578311486652785
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "3ab3f6fe47f1a5a3f8a1825b0b9eb6eea81f08199a7ece8e9432b048ab184e48",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.6168639491396255,
+          "expected_pct": 0.17086736681786638,
+          "lower_pct": -0.697099335340063,
+          "upper_pct": 1.0388340689757958,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.24963550480505442,
+            "ece": 0.14577246662505935,
+            "mae_pct": 0.3586575564121268,
+            "coverage90": 0.9034013605442177,
+            "reliability": [
+              {
+                "count": 1,
+                "probability": 0.19388919449218153,
+                "frequency": 0.0
+              },
+              {
+                "count": 69,
+                "probability": 0.2782522833336819,
+                "frequency": 0.6086956521739131
+              },
+              {
+                "count": 165,
+                "probability": 0.3394912812391221,
+                "frequency": 0.6181818181818182
+              },
+              {
+                "count": 264,
+                "probability": 0.4564075708197921,
+                "frequency": 0.5037878787878788
+              },
+              {
+                "count": 287,
+                "probability": 0.546159736331931,
+                "frequency": 0.37630662020905925
+              },
+              {
+                "count": 367,
+                "probability": 0.6498205940491952,
+                "frequency": 0.47956403269754766
+              },
+              {
+                "count": 266,
+                "probability": 0.7521923524173773,
+                "frequency": 0.8233082706766918
+              },
+              {
+                "count": 51,
+                "probability": 0.830394749118571,
+                "frequency": 0.8823529411764706
+              }
+            ],
+            "baseline_brier": 0.24883898040899996,
+            "zero_return_mae_pct": 0.3464183304189375,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2719924744597143
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "6497ab6da54cb9a6aede34ac11cc723eb5568b17b6ab4f69c9e7591f3360f47d",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.7302210205465789,
+          "expected_pct": -0.06854602595103075,
+          "lower_pct": -1.903298653919029,
+          "upper_pct": 1.7662066020169676,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.30941778359338173,
+            "ece": 0.24823394575482863,
+            "mae_pct": 1.2332120794359758,
+            "coverage90": 0.7702127659574468,
+            "reliability": [
+              {
+                "count": 1,
+                "probability": 0.2951383370889908,
+                "frequency": 1.0
+              },
+              {
+                "count": 17,
+                "probability": 0.35863885240785853,
+                "frequency": 0.9411764705882353
+              },
+              {
+                "count": 45,
+                "probability": 0.4558006716882609,
+                "frequency": 0.26666666666666666
+              },
+              {
+                "count": 75,
+                "probability": 0.5614477746521066,
+                "frequency": 0.3466666666666667
+              },
+              {
+                "count": 178,
+                "probability": 0.6567877157558587,
+                "frequency": 0.7808988764044944
+              },
+              {
+                "count": 287,
+                "probability": 0.7551613957273798,
+                "frequency": 0.7491289198606271
+              },
+              {
+                "count": 707,
+                "probability": 0.8538400899624942,
+                "frequency": 0.5162659123055162
+              },
+              {
+                "count": 100,
+                "probability": 0.9129419824475262,
+                "frequency": 0.39
+              }
+            ],
+            "baseline_brier": 0.2472673578293801,
+            "zero_return_mae_pct": 1.1189857095287505,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.25288449903650656
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1790447700000,
+      "end": 1792247400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "9e924bb296256e203066dd6202354f678810eeb3563b6bc0ef29f4f33ce6f81b",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.49956871523421803,
+          "expected_pct": -0.0018285397054029315,
+          "lower_pct": -0.12444076838807161,
+          "upper_pct": 0.12078368897726575,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2499925715033734,
+            "ece": 0.008348269989080892,
+            "mae_pct": 0.07831351182947756,
+            "coverage90": 0.810391363022942,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.49957634016451946,
+                "frequency": 0.49122807017543857
+              }
+            ],
+            "baseline_brier": 0.24995916732400583,
+            "zero_return_mae_pct": 0.07789949998680269,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.2499925715033734
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "19e7bd71e370b2df16c206e03e0ecab72a3a9dbfa6ca021decefa7fb8c926d57",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.4844245086857564,
+          "expected_pct": 0.005213674916468627,
+          "lower_pct": -0.20358170231289116,
+          "upper_pct": 0.21400905214582844,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25123103428347365,
+            "ece": 0.008602400208493571,
+            "mae_pct": 0.13807330722231664,
+            "coverage90": 0.800944669365722,
+            "reliability": [
+              {
+                "count": 85,
+                "probability": 0.38254266505880374,
+                "frequency": 0.49411764705882355
+              },
+              {
+                "count": 932,
+                "probability": 0.47368691522422385,
+                "frequency": 0.4742489270386266
+              },
+              {
+                "count": 465,
+                "probability": 0.5241743841461558,
+                "frequency": 0.5182795698924731
+              }
+            ],
+            "baseline_brier": 0.2501862518604165,
+            "zero_return_mae_pct": 0.13612031680882808,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2503583098505035
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "79241d1e9a4c8d882d634ebc918c5b9c9e2235f60cf61bf93fbf443bfe7c0c53",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.4952207948484125,
+          "expected_pct": 0.01902996967825404,
+          "lower_pct": -0.4374477807664972,
+          "upper_pct": 0.47550772012300524,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.2531862965046554,
+            "ece": 0.05145013845415111,
+            "mae_pct": 0.2828314094176149,
+            "coverage90": 0.8052738336713996,
+            "reliability": [
+              {
+                "count": 38,
+                "probability": 0.39017634040222715,
+                "frequency": 0.3684210526315789
+              },
+              {
+                "count": 722,
+                "probability": 0.47334405442964356,
+                "frequency": 0.49722991689750695
+              },
+              {
+                "count": 713,
+                "probability": 0.5278740945039794,
+                "frequency": 0.45161290322580644
+              },
+              {
+                "count": 6,
+                "probability": 0.6080386258783635,
+                "frequency": 0.0
+              }
+            ],
+            "baseline_brier": 0.2513237141940945,
+            "zero_return_mae_pct": 0.2742305708541475,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2529286838984818
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "c1b663892ff570ca6b3ca4bbe55cfb60a9cc0a2d7989be88235a026a16199ca8",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.6516492617877145,
+          "expected_pct": 0.05673120486112559,
+          "lower_pct": -0.813029263509418,
+          "upper_pct": 0.9264916732316691,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2810953064365018,
+            "ece": 0.19849547526952233,
+            "mae_pct": 0.4989233010956058,
+            "coverage90": 0.8136054421768707,
+            "reliability": [
+              {
+                "count": 40,
+                "probability": 0.47471667008459717,
+                "frequency": 0.625
+              },
+              {
+                "count": 415,
+                "probability": 0.5655157766518708,
+                "frequency": 0.42891566265060244
+              },
+              {
+                "count": 990,
+                "probability": 0.6334744732846406,
+                "frequency": 0.4131313131313131
+              },
+              {
+                "count": 25,
+                "probability": 0.717929583490447,
+                "frequency": 0.28
+              }
+            ],
+            "baseline_brier": 0.25369854305368184,
+            "zero_return_mae_pct": 0.49442006510106934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.25688975222460664
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "linear-boosted-platt-v2",
+          "fit_hash": "774061c0187e20a482952cd2bb5dd0680cba594ceca13a39dff5a834a19c8e6a",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.8771072969781815,
+          "expected_pct": 0.6973953539701223,
+          "lower_pct": -0.9857247778536922,
+          "upper_pct": 2.3805154857939366,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.29976815223821973,
+            "ece": 0.2933613213319693,
+            "mae_pct": 1.0981623053235983,
+            "coverage90": 0.749645390070922,
+            "reliability": [
+              {
+                "count": 6,
+                "probability": 0.29014568698515836,
+                "frequency": 0.0
+              },
+              {
+                "count": 106,
+                "probability": 0.33926814056968724,
+                "frequency": 0.04716981132075472
+              },
+              {
+                "count": 15,
+                "probability": 0.4394320602905398,
+                "frequency": 0.2
+              },
+              {
+                "count": 39,
+                "probability": 0.5714533578035663,
+                "frequency": 0.28205128205128205
+              },
+              {
+                "count": 517,
+                "probability": 0.6620952915928491,
+                "frequency": 0.2901353965183752
+              },
+              {
+                "count": 686,
+                "probability": 0.7419890831640945,
+                "frequency": 0.4912536443148688
+              },
+              {
+                "count": 41,
+                "probability": 0.8109700635851242,
+                "frequency": 0.8536585365853658
+              }
+            ],
+            "baseline_brier": 0.2586742133945667,
+            "zero_return_mae_pct": 1.1884938838204846,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.20183477119649296
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    }
+  ]
+}

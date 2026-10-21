@@ -31,3 +31,11 @@ def test_untrusted_link_not_fetched(monkeypatch):
     async def forbidden(): raise AssertionError('Must not fetch anything')
     monkeypatch.setattr(market,'assets',forbidden)
     assert asyncio.run(market.search('http://169.254.169.254/latest/meta-data'))==[]
+
+def test_short_horizon_expires_before_global_age_limit(client,monkeypatch):
+    import importlib
+    module=importlib.import_module('predice.app')
+    monkeypatch.setattr(module.time,'time',lambda: 601)
+    store.save_prediction('BTCUSDT',0,'5m',{'signal':'LONG','entry':100,'stop':99,'take_profit':102},1)
+    item=client.get('/predictions/BTCUSDT',headers={'Authorization':'Bearer test-only-token'}).json()['items'][0]
+    assert item['stale'] and item['signal']=='WAIT'

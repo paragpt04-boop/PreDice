@@ -52,7 +52,11 @@ class MarketViewModel: ViewModel() {
         }
     }
     fun add(symbol: String) = viewModelScope.launch {
-        try { request("/watchlist/$symbol","PUT"); select(symbol) }
+        try { request("/watchlist/$symbol","PUT"); update { it.copy(search=emptyList()) }; select(symbol) }
+        catch(e: Exception) { update { it.copy(error=e.message) } }
+    }
+    fun remove() = viewModelScope.launch {
+        try { request("/watchlist/${mutable.value.symbol}","DELETE"); select(mutable.value.symbol) }
         catch(e: Exception) { update { it.copy(error=e.message) } }
     }
     fun select(symbol: String) {
