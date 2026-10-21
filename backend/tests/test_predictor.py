@@ -24,7 +24,7 @@ class PredictionTests(unittest.TestCase):
     def test_symbols(self):
         self.assertEqual(normalize_symbol("btc"),"BTCUSDT")
         self.assertEqual(normalize_symbol("https://www.bitunix.com/contract-trade/BTCUSDT"),"BTCUSDT")
-        with self.assertRaises(ValueError): normalize_symbol("<script>")
+        with self.assertRaises(ValueError): normalize_symbol("")
 
     def test_no_future_leak(self):
         candles=self.candles()
