@@ -1,0 +1,2046 @@
+{
+  "protocol": "rolling-purged-55-20-25",
+  "window": 6000,
+  "step": 1500,
+  "execution_backtest": false,
+  "source": "Binance spot closed 5m candles",
+  "folds": [
+    {
+      "start": 1787747700000,
+      "end": 1789547400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.47306996858314526,
+          "expected_pct": -0.002978114118636378,
+          "lower_pct": -0.152144222179669,
+          "upper_pct": 0.14618799394239623,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25097456130289447,
+            "ece": 0.0369897395116923,
+            "mae_pct": 0.069667957654684,
+            "coverage90": 0.8866396761133604,
+            "reliability": [
+              {
+                "count": 1468,
+                "probability": 0.4734204135431494,
+                "frequency": 0.5095367847411444
+              },
+              {
+                "count": 14,
+                "probability": 0.5142884973091898,
+                "frequency": 0.6428571428571429
+              }
+            ],
+            "baseline_brier": 0.2501914030495297,
+            "zero_return_mae_pct": 0.06964840429008276,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.25097456130289447
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.4956567395195251,
+          "expected_pct": -0.0008877181780538908,
+          "lower_pct": -0.2752274052529796,
+          "upper_pct": 0.2734519688968718,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24906195743011567,
+            "ece": 0.006050034582374904,
+            "mae_pct": 0.118914428004809,
+            "coverage90": 0.9021592442645074,
+            "reliability": [
+              {
+                "count": 4,
+                "probability": 0.3782981789953689,
+                "frequency": 0.25
+              },
+              {
+                "count": 1209,
+                "probability": 0.4773940253663389,
+                "frequency": 0.47808105872622003
+              },
+              {
+                "count": 268,
+                "probability": 0.5157854553019325,
+                "frequency": 0.48880597014925375
+              },
+              {
+                "count": 1,
+                "probability": 0.6081668179160674,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.25005788246788774,
+            "zero_return_mae_pct": 0.11828519767360868,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.24893792052384126
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.4599027816518145,
+          "expected_pct": -0.0067239887122585865,
+          "lower_pct": -0.5193520101813194,
+          "upper_pct": 0.5059040327568022,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.2536748459984367,
+            "ece": 0.05918179936925393,
+            "mae_pct": 0.23523835334894927,
+            "coverage90": 0.8843813387423936,
+            "reliability": [
+              {
+                "count": 1,
+                "probability": 0.2749361795825805,
+                "frequency": 1.0
+              },
+              {
+                "count": 13,
+                "probability": 0.3799443299582743,
+                "frequency": 0.46153846153846156
+              },
+              {
+                "count": 1278,
+                "probability": 0.45866730021852914,
+                "frequency": 0.5039123630672926
+              },
+              {
+                "count": 175,
+                "probability": 0.5242139301424417,
+                "frequency": 0.3942857142857143
+              },
+              {
+                "count": 11,
+                "probability": 0.63160097700344,
+                "frequency": 0.18181818181818182
+              },
+              {
+                "count": 1,
+                "probability": 0.7641451065181094,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.25091828942590566,
+            "zero_return_mae_pct": 0.23305332333247333,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.24918037815199676
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.38928544388290576,
+          "expected_pct": 0.0027286507201214035,
+          "lower_pct": -0.8635804477644943,
+          "upper_pct": 0.8690377492047372,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.26396188657134917,
+            "ece": 0.11835648530015991,
+            "mae_pct": 0.5051400869006905,
+            "coverage90": 0.8197278911564626,
+            "reliability": [
+              {
+                "count": 1470,
+                "probability": 0.38912650789711906,
+                "frequency": 0.507482993197279
+              }
+            ],
+            "baseline_brier": 0.25056132584103785,
+            "zero_return_mae_pct": 0.49106366422152326,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2801368987064557
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "581cfeeaa551bf26121f05904d7dfb4cb02c587054218768fd5018ebdf279b37",
+          "probability_up": 0.24455561788131522,
+          "expected_pct": 0.26090320757020674,
+          "lower_pct": -1.3431092947061474,
+          "upper_pct": 1.8649157098465607,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.33349379137550944,
+            "ece": 0.3365474656991364,
+            "mae_pct": 1.0856159271790953,
+            "coverage90": 0.7382978723404255,
+            "reliability": [
+              {
+                "count": 162,
+                "probability": 0.06461198326067649,
+                "frequency": 0.024691358024691357
+              },
+              {
+                "count": 415,
+                "probability": 0.1532786442573878,
+                "frequency": 0.6048192771084338
+              },
+              {
+                "count": 781,
+                "probability": 0.23344873332877886,
+                "frequency": 0.5710627400768246
+              },
+              {
+                "count": 52,
+                "probability": 0.3269016046950962,
+                "frequency": 0.0
+              }
+            ],
+            "baseline_brier": 0.2531438519678263,
+            "zero_return_mae_pct": 1.0986625343342664,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.25319400573446305
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 75488.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1788197700000,
+      "end": 1789997400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.4967805919867375,
+          "expected_pct": -0.026247487033811426,
+          "lower_pct": -0.18266410565338334,
+          "upper_pct": 0.1301691315857605,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24967231903732684,
+            "ece": 0.02384266090394989,
+            "mae_pct": 0.07708459633332254,
+            "coverage90": 0.8846153846153846,
+            "reliability": [
+              {
+                "count": 371,
+                "probability": 0.48539600763394547,
+                "frequency": 0.5202156334231806
+              },
+              {
+                "count": 1111,
+                "probability": 0.5126761995572929,
+                "frequency": 0.5328532853285328
+              }
+            ],
+            "baseline_brier": 0.25065553160603066,
+            "zero_return_mae_pct": 0.07690382311693636,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.24967231903732684
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.44926601778962655,
+          "expected_pct": -0.046172429195462356,
+          "lower_pct": -0.31228543063645325,
+          "upper_pct": 0.2199405722455286,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2526905792044766,
+            "ece": 0.05808575606124739,
+            "mae_pct": 0.13475366040912182,
+            "coverage90": 0.8819163292847504,
+            "reliability": [
+              {
+                "count": 31,
+                "probability": 0.37486526580045954,
+                "frequency": 0.8064516129032258
+              },
+              {
+                "count": 1359,
+                "probability": 0.4750088798686652,
+                "frequency": 0.5217071376011774
+              },
+              {
+                "count": 92,
+                "probability": 0.5082502014771867,
+                "frequency": 0.6086956521739131
+              }
+            ],
+            "baseline_brier": 0.2503844258047664,
+            "zero_return_mae_pct": 0.1340739101677032,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2536477969852892
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.4965184608056771,
+          "expected_pct": -0.12958631915576063,
+          "lower_pct": -0.6675216054476647,
+          "upper_pct": 0.40834896713614344,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25378020640693777,
+            "ece": 0.06258949394047209,
+            "mae_pct": 0.27609206477539033,
+            "coverage90": 0.8891142663962136,
+            "reliability": [
+              {
+                "count": 1248,
+                "probability": 0.4768981775393874,
+                "frequency": 0.5456730769230769
+              },
+              {
+                "count": 225,
+                "probability": 0.5285216909158201,
+                "frequency": 0.5466666666666666
+              },
+              {
+                "count": 6,
+                "probability": 0.6093612605288846,
+                "frequency": 0.16666666666666666
+              }
+            ],
+            "baseline_brier": 0.24987894722304205,
+            "zero_return_mae_pct": 0.2732101237611015,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2540349182253047
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.6124810915474551,
+          "expected_pct": -0.006964527137482833,
+          "lower_pct": -1.018073656247554,
+          "upper_pct": 1.0041446019725884,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.24293957947787018,
+            "ece": 0.12904607008333563,
+            "mae_pct": 0.6220439613791644,
+            "coverage90": 0.8591836734693877,
+            "reliability": [
+              {
+                "count": 302,
+                "probability": 0.48843386912123493,
+                "frequency": 0.6059602649006622
+              },
+              {
+                "count": 1123,
+                "probability": 0.5237302465489725,
+                "frequency": 0.6518254674977738
+              },
+              {
+                "count": 45,
+                "probability": 0.6143595917419459,
+                "frequency": 0.8444444444444444
+              }
+            ],
+            "baseline_brier": 0.2510359584716373,
+            "zero_return_mae_pct": 0.598239340422204,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2403467728142462
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "2f525189a856abe842144672c4bce97f179f7d90e08eb4dba574a82090cf6950",
+          "probability_up": 0.5343059250755139,
+          "expected_pct": -0.06687278455509706,
+          "lower_pct": -2.3786854938452584,
+          "upper_pct": 2.244939924735064,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.23710569476815824,
+            "ece": 0.22958316581963467,
+            "mae_pct": 1.9608306572811123,
+            "coverage90": 0.7262411347517731,
+            "reliability": [
+              {
+                "count": 1410,
+                "probability": 0.5264452029746916,
+                "frequency": 0.7560283687943262
+              }
+            ],
+            "baseline_brier": 0.32433287201149325,
+            "zero_return_mae_pct": 1.9351396685325695,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.24357028968742167
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 85164.11,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1788647700000,
+      "end": 1790447400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5337871017346891,
+          "expected_pct": -0.0022264196846364225,
+          "lower_pct": -0.1744624146138316,
+          "upper_pct": 0.17000957524455876,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2518932598860106,
+            "ece": 0.04116121367736042,
+            "mae_pct": 0.0773959421003731,
+            "coverage90": 0.8960863697705803,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.5330640476854576,
+                "frequency": 0.49190283400809715
+              }
+            ],
+            "baseline_brier": 0.24995391863450644,
+            "zero_return_mae_pct": 0.07765912317918701,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.2518932598860106
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5433384460102748,
+          "expected_pct": -0.002035500908413527,
+          "lower_pct": -0.3046494298672389,
+          "upper_pct": 0.30057842805041185,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25317591825200786,
+            "ece": 0.05208434029842213,
+            "mae_pct": 0.13443916912506484,
+            "coverage90": 0.9068825910931174,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.5433124104738607,
+                "frequency": 0.49122807017543857
+              }
+            ],
+            "baseline_brier": 0.24996446817951676,
+            "zero_return_mae_pct": 0.13517017253818814,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2529450030697558
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.5657260759390806,
+          "expected_pct": -0.0076539236278781635,
+          "lower_pct": -0.6538480336402775,
+          "upper_pct": 0.6385401863845213,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.2542665803772797,
+            "ece": 0.0703349195824943,
+            "mae_pct": 0.24593516178178657,
+            "coverage90": 0.940500338066261,
+            "reliability": [
+              {
+                "count": 5,
+                "probability": 0.49147064466359014,
+                "frequency": 0.4
+              },
+              {
+                "count": 1418,
+                "probability": 0.558539467848798,
+                "frequency": 0.4908321579689704
+              },
+              {
+                "count": 56,
+                "probability": 0.6171254898142061,
+                "frequency": 0.48214285714285715
+              }
+            ],
+            "baseline_brier": 0.2499095650276773,
+            "zero_return_mae_pct": 0.2419769147707186,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2555488395842321
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.6676351570831546,
+          "expected_pct": 0.02506879916523417,
+          "lower_pct": -1.3276999461926349,
+          "upper_pct": 1.3778375445231033,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2718661743738103,
+            "ece": 0.14617104123639518,
+            "mae_pct": 0.5042037593871073,
+            "coverage90": 0.9551020408163265,
+            "reliability": [
+              {
+                "count": 21,
+                "probability": 0.5914808075435458,
+                "frequency": 0.42857142857142855
+              },
+              {
+                "count": 1442,
+                "probability": 0.6493862695178583,
+                "frequency": 0.5034674063800277
+              },
+              {
+                "count": 7,
+                "probability": 0.7193332877621169,
+                "frequency": 0.5714285714285714
+              }
+            ],
+            "baseline_brier": 0.2501804679393069,
+            "zero_return_mae_pct": 0.48229545849671934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2591595050805062
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "75570156664419979ef29acb590dcb10e8db8cbb4cafe5cfa805e626e2d22dbd",
+          "probability_up": 0.3968480903272953,
+          "expected_pct": -0.16572116766425485,
+          "lower_pct": -6.625835903513652,
+          "upper_pct": 6.294393568185141,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.3481315428125618,
+            "ece": 0.2900444209241464,
+            "mae_pct": 1.7450117472665772,
+            "coverage90": 0.9680851063829787,
+            "reliability": [
+              {
+                "count": 17,
+                "probability": 0.16992047091516915,
+                "frequency": 0.7647058823529411
+              },
+              {
+                "count": 67,
+                "probability": 0.25731864925158504,
+                "frequency": 0.5223880597014925
+              },
+              {
+                "count": 123,
+                "probability": 0.35273102269805795,
+                "frequency": 0.5691056910569106
+              },
+              {
+                "count": 167,
+                "probability": 0.4515978971614825,
+                "frequency": 0.5329341317365269
+              },
+              {
+                "count": 231,
+                "probability": 0.5489795274608944,
+                "frequency": 0.5021645021645021
+              },
+              {
+                "count": 182,
+                "probability": 0.649274047246549,
+                "frequency": 0.38461538461538464
+              },
+              {
+                "count": 228,
+                "probability": 0.7563100897063441,
+                "frequency": 0.32894736842105265
+              },
+              {
+                "count": 214,
+                "probability": 0.8475791851084878,
+                "frequency": 0.2850467289719626
+              },
+              {
+                "count": 181,
+                "probability": 0.9618320558988276,
+                "frequency": 0.6077348066298343
+              }
+            ],
+            "baseline_brier": 0.26512363738067773,
+            "zero_return_mae_pct": 1.4684385493959196,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.3733387862575727
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84064.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789097700000,
+      "end": 1790897400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.4737637314446024,
+          "expected_pct": 0.00018168262273684005,
+          "lower_pct": -0.16612187429513384,
+          "upper_pct": 0.1664852395406075,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.249942235688558,
+            "ece": 0.01047299992803874,
+            "mae_pct": 0.07544032674546418,
+            "coverage90": 0.9014844804318488,
+            "reliability": [
+              {
+                "count": 1063,
+                "probability": 0.4799062312510798,
+                "frequency": 0.49106302916274697
+              },
+              {
+                "count": 413,
+                "probability": 0.5207191382757679,
+                "frequency": 0.5278450363196125
+              },
+              {
+                "count": 6,
+                "probability": 0.6197189701905582,
+                "frequency": 0.5
+              }
+            ],
+            "baseline_brier": 0.25031078069899365,
+            "zero_return_mae_pct": 0.07502585131959486,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.249942235688558
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.4646862990685253,
+          "expected_pct": 0.002006587700477023,
+          "lower_pct": -0.28694291606908323,
+          "upper_pct": 0.29095609147003726,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2503056620206303,
+            "ece": 0.031190878965998352,
+            "mae_pct": 0.12656674883745903,
+            "coverage90": 0.9068825910931174,
+            "reliability": [
+              {
+                "count": 1110,
+                "probability": 0.47392764963933076,
+                "frequency": 0.5063063063063064
+              },
+              {
+                "count": 354,
+                "probability": 0.5248471941333719,
+                "frequency": 0.5451977401129944
+              },
+              {
+                "count": 17,
+                "probability": 0.6347456339702782,
+                "frequency": 0.47058823529411764
+              },
+              {
+                "count": 1,
+                "probability": 0.7101953270144339,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.24977768507519005,
+            "zero_return_mae_pct": 0.12625012754466683,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2494476005856797
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.481978957727068,
+          "expected_pct": 0.01522160106286451,
+          "lower_pct": -0.4965707049737404,
+          "upper_pct": 0.5270139070994694,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25117189994193506,
+            "ece": 0.03203588603850546,
+            "mae_pct": 0.25989260460495794,
+            "coverage90": 0.8762677484787018,
+            "reliability": [
+              {
+                "count": 1477,
+                "probability": 0.47706291977708104,
+                "frequency": 0.5084631008801624
+              },
+              {
+                "count": 2,
+                "probability": 0.5015039808491749,
+                "frequency": 0.0
+              }
+            ],
+            "baseline_brier": 0.250045105766487,
+            "zero_return_mae_pct": 0.25646961138998264,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.25344054240889846
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.46162435372014465,
+          "expected_pct": 0.11726209724020004,
+          "lower_pct": -1.1057455299258516,
+          "upper_pct": 1.3402697244062516,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.2716460327818588,
+            "ece": 0.1438003409273123,
+            "mae_pct": 0.4984140367171321,
+            "coverage90": 0.9414965986394558,
+            "reliability": [
+              {
+                "count": 4,
+                "probability": 0.17696563309759314,
+                "frequency": 0.75
+              },
+              {
+                "count": 126,
+                "probability": 0.2675660907167507,
+                "frequency": 0.4603174603174603
+              },
+              {
+                "count": 474,
+                "probability": 0.3529689917259135,
+                "frequency": 0.5253164556962026
+              },
+              {
+                "count": 514,
+                "probability": 0.44860705500422493,
+                "frequency": 0.5778210116731517
+              },
+              {
+                "count": 233,
+                "probability": 0.540084703110217,
+                "frequency": 0.5021459227467812
+              },
+              {
+                "count": 89,
+                "probability": 0.6446610422338478,
+                "frequency": 0.449438202247191
+              },
+              {
+                "count": 30,
+                "probability": 0.7161483630870573,
+                "frequency": 0.36666666666666664
+              }
+            ],
+            "baseline_brier": 0.25188689030914935,
+            "zero_return_mae_pct": 0.47900513130854094,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.26980906576812297
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "709bcfac96221b0ebd45b418b795f2fb4787169db081b34d10679f4224282dd6",
+          "probability_up": 0.22603833412783061,
+          "expected_pct": 0.8698544568432415,
+          "lower_pct": -2.7296018040051164,
+          "upper_pct": 4.469310717691599,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.3511092897116477,
+            "ece": 0.3422833585490204,
+            "mae_pct": 1.1968952610293992,
+            "coverage90": 0.975177304964539,
+            "reliability": [
+              {
+                "count": 101,
+                "probability": 0.07701348143321193,
+                "frequency": 0.22772277227722773
+              },
+              {
+                "count": 524,
+                "probability": 0.15129097341343675,
+                "frequency": 0.5419847328244275
+              },
+              {
+                "count": 389,
+                "probability": 0.2457050740455701,
+                "frequency": 0.6606683804627249
+              },
+              {
+                "count": 194,
+                "probability": 0.34332552250037673,
+                "frequency": 0.6804123711340206
+              },
+              {
+                "count": 96,
+                "probability": 0.4433922081009318,
+                "frequency": 0.6666666666666666
+              },
+              {
+                "count": 68,
+                "probability": 0.5448259834238929,
+                "frequency": 0.6617647058823529
+              },
+              {
+                "count": 29,
+                "probability": 0.6408725940386846,
+                "frequency": 0.7931034482758621
+              },
+              {
+                "count": 6,
+                "probability": 0.7512205130972651,
+                "frequency": 1.0
+              },
+              {
+                "count": 3,
+                "probability": 0.81158680915548,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.24154605507490404,
+            "zero_return_mae_pct": 0.8044160818801136,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.3433649086844934
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84799.37,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789547700000,
+      "end": 1791347400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.502000883804424,
+          "expected_pct": -0.007892252204854002,
+          "lower_pct": -0.18987304060096483,
+          "upper_pct": 0.17408853619125683,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25000935892593557,
+            "ece": 0.0033894690284987927,
+            "mae_pct": 0.059998562957079234,
+            "coverage90": 0.9446693657219973,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.5020399413631816,
+                "frequency": 0.49865047233468285
+              }
+            ],
+            "baseline_brier": 0.25015192021091204,
+            "zero_return_mae_pct": 0.059097306256800305,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.25000935892593557
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.48343454575883327,
+          "expected_pct": -0.02023661966269416,
+          "lower_pct": -0.32412622213076026,
+          "upper_pct": 0.28365298280537193,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25058364243858156,
+            "ece": 0.00679656250877757,
+            "mae_pct": 0.10260750415264537,
+            "coverage90": 0.9581646423751687,
+            "reliability": [
+              {
+                "count": 284,
+                "probability": 0.49278051862398575,
+                "frequency": 0.4859154929577465
+              },
+              {
+                "count": 1197,
+                "probability": 0.5140061838745723,
+                "frequency": 0.52046783625731
+              },
+              {
+                "count": 1,
+                "probability": 0.6117595533405679,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.24980434566689486,
+            "zero_return_mae_pct": 0.09948879359329676,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.2503265922314372
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.4900381199008169,
+          "expected_pct": -0.009155129326091496,
+          "lower_pct": -0.6494949642060723,
+          "upper_pct": 0.6311847055538893,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.2522096459694582,
+            "ece": 0.06749622518092947,
+            "mae_pct": 0.22197473904014697,
+            "coverage90": 0.9323867478025692,
+            "reliability": [
+              {
+                "count": 888,
+                "probability": 0.49132485158108685,
+                "frequency": 0.5968468468468469
+              },
+              {
+                "count": 588,
+                "probability": 0.5131639201767794,
+                "frequency": 0.5221088435374149
+              },
+              {
+                "count": 3,
+                "probability": 0.6212567701820307,
+                "frequency": 0.3333333333333333
+              }
+            ],
+            "baseline_brier": 0.24746660062071799,
+            "zero_return_mae_pct": 0.21383018616563335,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2517850469086347
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.5155044977895799,
+          "expected_pct": -0.01394986617432206,
+          "lower_pct": -1.1568549898572282,
+          "upper_pct": 1.128955257508584,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.25286449812158,
+            "ece": 0.10768559074557564,
+            "mae_pct": 0.4831484974950769,
+            "coverage90": 0.8816326530612245,
+            "reliability": [
+              {
+                "count": 7,
+                "probability": 0.279369683996668,
+                "frequency": 0.8571428571428571
+              },
+              {
+                "count": 102,
+                "probability": 0.3606152810966576,
+                "frequency": 0.5196078431372549
+              },
+              {
+                "count": 825,
+                "probability": 0.47007688180129137,
+                "frequency": 0.5624242424242424
+              },
+              {
+                "count": 513,
+                "probability": 0.5197696834342005,
+                "frequency": 0.6374269005847953
+              },
+              {
+                "count": 23,
+                "probability": 0.6308069589720785,
+                "frequency": 0.6956521739130435
+              }
+            ],
+            "baseline_brier": 0.2421306331898831,
+            "zero_return_mae_pct": 0.47291851248588934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.2631507110347629
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "c7e36a2951d9c1cd1dc8836a7eaa8485829fefaa3d9e0244c4e03a7f2fc2437b",
+          "probability_up": 0.49096468923343234,
+          "expected_pct": -0.05365345266360212,
+          "lower_pct": -2.940403643686492,
+          "upper_pct": 2.8330967383592878,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.22142750993302932,
+            "ece": 0.09999467124834595,
+            "mae_pct": 1.4060769152845225,
+            "coverage90": 0.9276595744680851,
+            "reliability": [
+              {
+                "count": 71,
+                "probability": 0.3793885160748035,
+                "frequency": 0.08450704225352113
+              },
+              {
+                "count": 471,
+                "probability": 0.4606469048176531,
+                "frequency": 0.4607218683651805
+              },
+              {
+                "count": 810,
+                "probability": 0.5565305989139772,
+                "frequency": 0.6765432098765433
+              },
+              {
+                "count": 58,
+                "probability": 0.6067176015811588,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.24316827957348078,
+            "zero_return_mae_pct": 0.9520035450971138,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.19746726090443092
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 84084.0,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1789997700000,
+      "end": 1791797400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.5037486637916058,
+          "expected_pct": 0.0013830282976696493,
+          "lower_pct": -0.11436963777304411,
+          "upper_pct": 0.11713569436838343,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24998907813949386,
+            "ece": 0.011314000384242538,
+            "mae_pct": 0.054487974531748105,
+            "coverage90": 0.8765182186234818,
+            "reliability": [
+              {
+                "count": 149,
+                "probability": 0.49719820280807586,
+                "frequency": 0.4563758389261745
+              },
+              {
+                "count": 1333,
+                "probability": 0.5046397722063347,
+                "frequency": 0.4966241560390098
+              }
+            ],
+            "baseline_brier": 0.24995467536729962,
+            "zero_return_mae_pct": 0.054111464848421664,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.24998907813949386
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.5301504828315571,
+          "expected_pct": 0.01492729604693515,
+          "lower_pct": -0.18411741315690822,
+          "upper_pct": 0.2139720052507785,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.25097035910042537,
+            "ece": 0.0421376143997434,
+            "mae_pct": 0.09626777650509193,
+            "coverage90": 0.8798920377867746,
+            "reliability": [
+              {
+                "count": 1,
+                "probability": 0.38490037163543883,
+                "frequency": 1.0
+              },
+              {
+                "count": 161,
+                "probability": 0.48241577230807636,
+                "frequency": 0.45962732919254656
+              },
+              {
+                "count": 1305,
+                "probability": 0.5345631351046028,
+                "frequency": 0.49195402298850577
+              },
+              {
+                "count": 15,
+                "probability": 0.6372676172632119,
+                "frequency": 0.4666666666666667
+              }
+            ],
+            "baseline_brier": 0.24997648741774928,
+            "zero_return_mae_pct": 0.09625940160184959,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.25188804978010376
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.669449257264131,
+          "expected_pct": 0.09498649882372283,
+          "lower_pct": -0.35894903374834297,
+          "upper_pct": 0.5489220313957887,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25463406188615545,
+            "ece": 0.08788639164394373,
+            "mae_pct": 0.19060278901466568,
+            "coverage90": 0.90736984448952,
+            "reliability": [
+              {
+                "count": 3,
+                "probability": 0.23280755903128417,
+                "frequency": 0.6666666666666666
+              },
+              {
+                "count": 24,
+                "probability": 0.374062007867525,
+                "frequency": 0.4583333333333333
+              },
+              {
+                "count": 150,
+                "probability": 0.4672234241247069,
+                "frequency": 0.36
+              },
+              {
+                "count": 735,
+                "probability": 0.5591759972608926,
+                "frequency": 0.4748299319727891
+              },
+              {
+                "count": 563,
+                "probability": 0.6277536320073365,
+                "frequency": 0.5417406749555951
+              },
+              {
+                "count": 4,
+                "probability": 0.7108205795713236,
+                "frequency": 0.75
+              }
+            ],
+            "baseline_brier": 0.24995190730724284,
+            "zero_return_mae_pct": 0.18785127096212592,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2620466522896714
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.7229898429820728,
+          "expected_pct": 0.09186704775807805,
+          "lower_pct": -0.8037500046888153,
+          "upper_pct": 0.9874841002049713,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.24723588790516932,
+            "ece": 0.0839486077588984,
+            "mae_pct": 0.34044523678818267,
+            "coverage90": 0.9251700680272109,
+            "reliability": [
+              {
+                "count": 2,
+                "probability": 0.09442727789806281,
+                "frequency": 0.0
+              },
+              {
+                "count": 24,
+                "probability": 0.16283072997188167,
+                "frequency": 0.375
+              },
+              {
+                "count": 39,
+                "probability": 0.25405239881709224,
+                "frequency": 0.5128205128205128
+              },
+              {
+                "count": 74,
+                "probability": 0.3613708061052027,
+                "frequency": 0.527027027027027
+              },
+              {
+                "count": 194,
+                "probability": 0.4510957980480542,
+                "frequency": 0.4690721649484536
+              },
+              {
+                "count": 237,
+                "probability": 0.5543999917677275,
+                "frequency": 0.47257383966244726
+              },
+              {
+                "count": 512,
+                "probability": 0.6571686975441602,
+                "frequency": 0.560546875
+              },
+              {
+                "count": 352,
+                "probability": 0.7356699616496666,
+                "frequency": 0.6818181818181818
+              },
+              {
+                "count": 29,
+                "probability": 0.8269022229730323,
+                "frequency": 0.6896551724137931
+              },
+              {
+                "count": 7,
+                "probability": 0.9305082517683145,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.24883898040899996,
+            "zero_return_mae_pct": 0.3464183304189375,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.27050542121890203
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "fb4e088021ece1d784d1d7e44e652d0323553a85efed35588968135f2cdda713",
+          "probability_up": 0.8242028380621331,
+          "expected_pct": 0.09892119379998209,
+          "lower_pct": -1.6673530549485889,
+          "upper_pct": 1.865195442548553,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.3114730818697813,
+            "ece": 0.2138703064449596,
+            "mae_pct": 1.2171687069178225,
+            "coverage90": 0.7822695035460993,
+            "reliability": [
+              {
+                "count": 13,
+                "probability": 0.35054697498327114,
+                "frequency": 0.3076923076923077
+              },
+              {
+                "count": 41,
+                "probability": 0.4566754047211617,
+                "frequency": 0.3902439024390244
+              },
+              {
+                "count": 95,
+                "probability": 0.5506863375883315,
+                "frequency": 0.6947368421052632
+              },
+              {
+                "count": 132,
+                "probability": 0.6533734575281077,
+                "frequency": 0.5909090909090909
+              },
+              {
+                "count": 486,
+                "probability": 0.7612155692157282,
+                "frequency": 0.7386831275720165
+              },
+              {
+                "count": 485,
+                "probability": 0.8403038823652308,
+                "frequency": 0.4948453608247423
+              },
+              {
+                "count": 158,
+                "probability": 0.9357473791787554,
+                "frequency": 0.31645569620253167
+              }
+            ],
+            "baseline_brier": 0.2472673578293801,
+            "zero_return_mae_pct": 1.1189857095287505,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.23542888500734488
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 83460.13,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    },
+    {
+      "start": 1790447700000,
+      "end": 1792247400000,
+      "results": {
+        "5m": {
+          "horizon": "5m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.4995880877303902,
+          "expected_pct": 0.0012285047998685911,
+          "lower_pct": -0.11989621893328142,
+          "upper_pct": 0.1223532285330186,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.24999310065248131,
+            "ece": 0.008361992580400435,
+            "mae_pct": 0.07799856731997036,
+            "coverage90": 0.8070175438596491,
+            "reliability": [
+              {
+                "count": 1482,
+                "probability": 0.499590062755839,
+                "frequency": 0.49122807017543857
+              }
+            ],
+            "baseline_brier": 0.24995916732400583,
+            "zero_return_mae_pct": 0.07789949998680269,
+            "nonoverlap_samples": 1482,
+            "nonoverlap_brier": 0.24999310065248131
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3329,
+            "calibration_start": 3331,
+            "calibration_end": 4515,
+            "test_start": 4517,
+            "purge_bars": 1
+          }
+        },
+        "15m": {
+          "horizon": "15m",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.5112201762195836,
+          "expected_pct": 0.011111897977693401,
+          "lower_pct": -0.195443657356077,
+          "upper_pct": 0.21766745331146378,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1482,
+            "brier": 0.2504229275796996,
+            "ece": 0.005098971661141324,
+            "mae_pct": 0.13690673584346852,
+            "coverage90": 0.7968960863697706,
+            "reliability": [
+              {
+                "count": 7,
+                "probability": 0.38709306060438753,
+                "frequency": 0.42857142857142855
+              },
+              {
+                "count": 821,
+                "probability": 0.4782967777980493,
+                "frequency": 0.47381242387332523
+              },
+              {
+                "count": 653,
+                "probability": 0.5133049344293523,
+                "frequency": 0.5084226646248086
+              },
+              {
+                "count": 1,
+                "probability": 0.6034493285233825,
+                "frequency": 1.0
+              }
+            ],
+            "baseline_brier": 0.2501862518604165,
+            "zero_return_mae_pct": 0.13612031680882808,
+            "nonoverlap_samples": 494,
+            "nonoverlap_brier": 0.24955431441197665
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3326,
+            "calibration_start": 3330,
+            "calibration_end": 4511,
+            "test_start": 4515,
+            "purge_bars": 3
+          }
+        },
+        "1h": {
+          "horizon": "1h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.5588017776602736,
+          "expected_pct": 0.03723176650564209,
+          "lower_pct": -0.3953631498188556,
+          "upper_pct": 0.46982668283013984,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1479,
+            "brier": 0.25451239425085387,
+            "ece": 0.04220876287368453,
+            "mae_pct": 0.27756687765024557,
+            "coverage90": 0.7998647734956051,
+            "reliability": [
+              {
+                "count": 23,
+                "probability": 0.16381717599181003,
+                "frequency": 0.5217391304347826
+              },
+              {
+                "count": 44,
+                "probability": 0.255623710014853,
+                "frequency": 0.5
+              },
+              {
+                "count": 172,
+                "probability": 0.3652592831040224,
+                "frequency": 0.4011627906976744
+              },
+              {
+                "count": 578,
+                "probability": 0.4633190982081183,
+                "frequency": 0.46539792387543255
+              },
+              {
+                "count": 640,
+                "probability": 0.5400188777115501,
+                "frequency": 0.49375
+              },
+              {
+                "count": 22,
+                "probability": 0.6114978318834884,
+                "frequency": 0.3181818181818182
+              }
+            ],
+            "baseline_brier": 0.2513237141940945,
+            "zero_return_mae_pct": 0.2742305708541475,
+            "nonoverlap_samples": 124,
+            "nonoverlap_brier": 0.2564172487551572
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3312,
+            "calibration_start": 3325,
+            "calibration_end": 4496,
+            "test_start": 4509,
+            "purge_bars": 12
+          }
+        },
+        "4h": {
+          "horizon": "4h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.6947008234866581,
+          "expected_pct": 0.06021193398543941,
+          "lower_pct": -0.7877808597517579,
+          "upper_pct": 0.9082047277226368,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1470,
+            "brier": 0.27715232157583436,
+            "ece": 0.17251850506706576,
+            "mae_pct": 0.4926142660232083,
+            "coverage90": 0.810204081632653,
+            "reliability": [
+              {
+                "count": 14,
+                "probability": 0.1552510963707545,
+                "frequency": 0.9285714285714286
+              },
+              {
+                "count": 31,
+                "probability": 0.2544067485004542,
+                "frequency": 0.2903225806451613
+              },
+              {
+                "count": 97,
+                "probability": 0.3612421306171674,
+                "frequency": 0.4536082474226804
+              },
+              {
+                "count": 238,
+                "probability": 0.45511106252013606,
+                "frequency": 0.37815126050420167
+              },
+              {
+                "count": 413,
+                "probability": 0.5548009942500224,
+                "frequency": 0.3946731234866828
+              },
+              {
+                "count": 549,
+                "probability": 0.6477218102600477,
+                "frequency": 0.42987249544626593
+              },
+              {
+                "count": 128,
+                "probability": 0.7238616901042089,
+                "frequency": 0.5
+              }
+            ],
+            "baseline_brier": 0.25369854305368184,
+            "zero_return_mae_pct": 0.49442006510106934,
+            "nonoverlap_samples": 31,
+            "nonoverlap_brier": 0.22726868732212271
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 3257,
+            "calibration_start": 3306,
+            "calibration_end": 4433,
+            "test_start": 4482,
+            "purge_bars": 48
+          }
+        },
+        "24h": {
+          "horizon": "24h",
+          "model": "ridge-logit-platt-v1",
+          "data_hash": "62de1edc2b8bbd4143f412dd3af3bda1bf716fc6f962cb69e50ee1de13844189",
+          "probability_up": 0.7788291001612694,
+          "expected_pct": 0.21525431005008452,
+          "lower_pct": -1.495370061435763,
+          "upper_pct": 1.9258786815359321,
+          "interval_nominal": 0.9,
+          "metrics": {
+            "samples": 1410,
+            "brier": 0.32576781121875775,
+            "ece": 0.320091395675609,
+            "mae_pct": 1.121838258275907,
+            "coverage90": 0.74822695035461,
+            "reliability": [
+              {
+                "count": 5,
+                "probability": 0.3828895519165318,
+                "frequency": 0.0
+              },
+              {
+                "count": 83,
+                "probability": 0.45403065844881874,
+                "frequency": 0.04819277108433735
+              },
+              {
+                "count": 58,
+                "probability": 0.5461300955009399,
+                "frequency": 0.5
+              },
+              {
+                "count": 342,
+                "probability": 0.6699694359732763,
+                "frequency": 0.3304093567251462
+              },
+              {
+                "count": 834,
+                "probability": 0.7430167173305406,
+                "frequency": 0.3872901678657074
+              },
+              {
+                "count": 88,
+                "probability": 0.8210095522294112,
+                "frequency": 0.8181818181818182
+              }
+            ],
+            "baseline_brier": 0.2586742133945667,
+            "zero_return_mae_pct": 1.1884938838204846,
+            "nonoverlap_samples": 5,
+            "nonoverlap_brier": 0.24219094151021853
+          },
+          "qualified": false,
+          "signal": "WAIT",
+          "reference_price": 81607.42,
+          "entry": null,
+          "stop": null,
+          "take_profit": null,
+          "reason": "Abstention: evidence or net expected edge insufficient",
+          "split": {
+            "train_end": 2885,
+            "calibration_start": 3174,
+            "calibration_end": 4013,
+            "test_start": 4302,
+            "purge_bars": 288
+          }
+        }
+      }
+    }
+  ]
+}
